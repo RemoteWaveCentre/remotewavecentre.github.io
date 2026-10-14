@@ -43,7 +43,7 @@ window.RWC = (function () {
         "Samsung": ["BN59-01315 Smart TV", "BN59-01199 Crystal UHD", "BN59-01363 QLED", "TM2280 Neo QLED", "The Frame 2021–2024", "Series 4/5/6/7/8", "Plasma & LCD legacy"],
         "LG": ["AKB75095307 OLED", "MR21GA Magic Remote", "AKB73715601 Smart TV", "NanoCell / QNED", "LCD & Plasma legacy"],
         "Sony": ["Bravia X80/X90 Google TV", "RMF-TX500E Smart", "Bravia A80 OLED", "KD / KDL legacy"],
-        "Hisense": ["EN2Q27H Vidaa U6/U7", "ERF3I80H Smart", "EN2B27H A6 Series", "LED legacy"],
+        "Hisense": ["EN2Q27H Vidaa U6/U7", "ERF3I80H Smart", "EN2B27H A6 Series", "ERF3V80H Smart", "ERF3J80H Vidaa U8", "LED legacy"],
         "TCL": ["Google TV RC802N", "Roku TV RC280", "S/P/C Series", "LED legacy"],
         "Panasonic": ["Viera N2QAYB", "TX Smart Series", "Plasma legacy"],
         "Philips": ["Smart TV 9965 Series", "LED 5000 Series"],
@@ -257,41 +257,54 @@ window.RWC = (function () {
     /* Real product photos live in assets/photos/. Each key is any unique
        substring of the generated product name. One photo per card. */
 
-    /* --- Vitron (3 photos / 3 cards) --- */
+    /* --- Vitron (3) --- */
     "Vitron Smart TV (Whale TV)": { image: "assets/photos/rwc-01.jpg" },
     "Vitron Android TV Series":   { image: "assets/photos/rwc-10.jpg" },
     "Vitron LED legacy":          { image: "assets/photos/rwc-24.jpg" },
 
-    /* --- Hisense --- */
+    /* --- Hisense (6) --- */
     "Hisense EN2B27":             { image: "assets/photos/rwc-09.jpg" },
     "Hisense EN2Q27H":            { image: "assets/photos/rwc-02.jpg" },
     "Hisense ERF3I80H":           { image: "assets/photos/rwc-12.jpg" },
+    "Hisense ERF3V80H":           { image: "assets/photos/rwc-11.jpg" },
+    "Hisense ERF3J80H":           { image: "assets/photos/rwc-15.jpg" },
     "Hisense LED legacy":         { image: "assets/photos/rwc-03.jpg" },
 
-    /* --- Samsung --- */
+    /* --- Samsung (4) --- */
     "Samsung BN59-01199":         { image: "assets/photos/rwc-06.jpg" },
     "Samsung Series 4/5/6/7/8":   { image: "assets/photos/rwc-22.jpg" },
     "Samsung BN59-01315":         { image: "assets/photos/rwc-04.jpg" },
     "Samsung BN59-01363":         { image: "assets/photos/rwc-07.jpg" },
 
-    /* --- TCL (4 photos / 4 cards) --- */
+    /* --- TCL (4) --- */
     "TCL Google TV RC802N":       { image: "assets/photos/rwc-16.jpg" },
     "TCL Roku TV RC280":          { image: "assets/photos/rwc-28.jpg" },
     "TCL S/P/C Series":           { image: "assets/photos/rwc-13.jpg" },
     "TCL LED legacy":             { image: "assets/photos/rwc-08.jpg" },
 
-    /* --- LG --- */
-    "LG AKB75095307":             { image: "assets/photos/rwc-25.jpg" }
+    /* --- LG (1) --- */
+    "LG AKB75095307":             { image: "assets/photos/rwc-25.jpg" },
 
-    /* 16 of the 30 photos are placed above. Still unused:
-         rwc-05, rwc-11, rwc-14, rwc-15, rwc-17, rwc-18, rwc-19, rwc-20,
-         rwc-21, rwc-23, rwc-26, rwc-27, rwc-29, rwc-30
+    /* --- Covers: remotes photographed inside a sleeve, brand not visible.
+       A "Universal" cover fits any remote, so these live on the generic
+       Universal & Smart cover cards. (12) --- */
+    "Silicone Sleeve for Universal Universal & Smart":           { image: "assets/photos/rwc-05.jpg" },
+    "Clear TPU Case for Universal Universal & Smart":            { image: "assets/photos/rwc-14.jpg" },
+    "Shockproof Case for Universal Universal & Smart":           { image: "assets/photos/rwc-17.jpg" },
+    "Glow-in-the-Dark Sleeve for Universal Universal & Smart":   { image: "assets/photos/rwc-18.jpg" },
+    "Silicone Sleeve for Smart Universal & Smart":               { image: "assets/photos/rwc-19.jpg" },
+    "Clear TPU Case for Smart Universal & Smart":                { image: "assets/photos/rwc-20.jpg" },
+    "Shockproof Case for Smart Universal & Smart":               { image: "assets/photos/rwc-21.jpg" },
+    "Glow-in-the-Dark Sleeve for Smart Universal & Smart":       { image: "assets/photos/rwc-23.jpg" },
+    "Silicone Sleeve for Replacement Universal & Smart":         { image: "assets/photos/rwc-26.jpg" },
+    "Clear TPU Case for Replacement Universal & Smart":          { image: "assets/photos/rwc-27.jpg" },
+    "Shockproof Case for Replacement Universal & Smart":         { image: "assets/photos/rwc-29.jpg" },
+    "Glow-in-the-Dark Sleeve for Replacement Universal & Smart": { image: "assets/photos/rwc-30.jpg" }
 
-       Other things you can set on any product:
+    /* All 30 photos are now placed. You can also set on any product:
          price  — a number (1499) or string ("KSh 1499")
          badge  — e.g. "Best seller"
-         blurb  — overrides the description
-    */
+         blurb  — overrides the description                */
   };
 
   function slug(s) {
