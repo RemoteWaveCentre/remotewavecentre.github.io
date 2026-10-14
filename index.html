@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remote Wave Centre — Every Remote, Every Cover</title>
+<meta name="description" content="Remote Wave Centre stocks remotes and protective covers for TVs, air conditioners, soundbars, DSTV decoders, projectors, CCTV, fans and gate motors. Call or WhatsApp 074 050 8902.">
+<meta name="theme-color" content="#062028">
+<meta property="og:title" content="Remote Wave Centre — Every Remote, Every Cover">
+<meta property="og:description" content="Thousands of replacement remotes and covers. Price on request — call or WhatsApp 074 050 8902.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23062028'/%3E%3Cpath d='M8 42c8-14 16-14 24 0s16 14 24 0' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='20' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#catalogue">Skip to catalogue</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Remote Wave Centre home">
+      <span class="brand-mark" aria-hidden="true">
+        <!-- Drop a logo at assets/logo.png and it appears here automatically. -->
+        <img class="brand-img" src="assets/logo.png" alt="" onerror="this.remove()">
+        <svg viewBox="0 0 64 64" role="img">
+          <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#0891b2"/>
+            </linearGradient>
+          </defs>
+          <path d="M8 40c8-13 16-13 24 0s16 13 24 0" stroke="#5eead4" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <circle cx="32" cy="19" r="6" fill="#22d3ee"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>Remote Wave</strong>
+        <small>Centre</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#catalogue">Catalogue</a>
+      <a href="#categories">Categories</a>
+      <a href="#covers">Covers</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="tel:+27740508902">
+        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.25 1z"/></svg>
+        074 050 8902
+      </a>
+      <button class="btn btn-solid" data-enquire="general">
+        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+        Enquire
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="pill">
+        <span class="dot"></span> Replacement remotes &amp; covers · Nationwide delivery
+      </span>
+      <h1>
+        Every remote.<br>
+        Every cover.<br>
+        <span class="grad">One wave.</span>
+      </h1>
+      <p class="lede">
+        TV, aircon, soundbar, DSTV, projector, CCTV, ceiling fan and gate — if it has a
+        button, we have a replacement for it. Plus protective covers so the remote that
+        works actually lasts.
+      </p>
+
+      <form class="hero-search" id="heroSearch" role="search">
+        <svg viewBox="0 0 24 24" class="ic search-ic" aria-hidden="true"><path d="M10 2a8 8 0 105.3 14l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+        <input id="heroQuery" type="search" placeholder="Search a brand or model — Samsung, DSTV Explora, Daikin, Centurion…" aria-label="Search the catalogue" autocomplete="off">
+        <button class="btn btn-solid" type="submit">Search</button>
+      </form>
+
+      <div class="chips" id="heroChips" aria-label="Quick categories"></div>
+
+      <ul class="stats">
+        <li><strong id="statRemotes">0</strong><span>remotes listed</span></li>
+        <li><strong id="statCovers">0</strong><span>covers listed</span></li>
+        <li><strong id="statCats">0</strong><span>categories</span></li>
+        <li><strong>Same day</strong><span>dispatch on stock</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="glow g1"></div>
+      <div class="glow g2"></div>
+      <svg viewBox="0 0 300 420" class="hero-remote">
+        <defs>
+          <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0e3f4b"/><stop offset="1" stop-color="#071f27"/>
+          </linearGradient>
+          <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#14b8a6"/><stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+        <rect x="55" y="10" width="190" height="400" rx="42" fill="url(#body)" stroke="rgba(94,234,212,.28)"/>
+        <rect x="80" y="34" width="140" height="70" rx="16" fill="url(#scr)" opacity=".92"/>
+        <rect x="80" y="126" width="140" height="16" rx="8" fill="rgba(94,234,212,.18)"/>
+        <circle cx="150" cy="180" r="24" fill="none" stroke="#5eead4" stroke-width="6"/>
+        <circle cx="150" cy="180" r="9" fill="#5eead4"/>
+        <g fill="rgba(94,234,212,.35)">
+          <rect x="86" y="232" width="40" height="30" rx="9"/><rect x="130" y="232" width="40" height="30" rx="9"/><rect x="174" y="232" width="40" height="30" rx="9"/>
+          <rect x="86" y="272" width="40" height="30" rx="9"/><rect x="130" y="272" width="40" height="30" rx="9"/><rect x="174" y="272" width="40" height="30" rx="9"/>
+          <rect x="86" y="312" width="40" height="30" rx="9"/><rect x="130" y="312" width="40" height="30" rx="9"/><rect x="174" y="312" width="40" height="30" rx="9"/>
+        </g>
+        <rect x="86" y="360" width="128" height="26" rx="13" fill="rgba(34,211,238,.5)"/>
+      </svg>
+      <div class="float-card f1">
+        <span class="fc-dot"></span>
+        <div><strong>Price on request</strong><small>Call 074 050 8902</small></div>
+      </div>
+      <div class="float-card f2">
+        <span class="fc-dot cy"></span>
+        <div><strong>300+ covers</strong><small>Silicone · TPU · Shockproof</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Browse by device</p>
+        <h2>Ten families, hundreds of models</h2>
+      </div>
+      <p class="section-note">
+        Pick a family to jump straight into the catalogue. Everything below is in stock or
+        sourced on order.
+      </p>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ================= CATALOGUE ================= -->
+<section class="section section-alt" id="catalogue">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">The catalogue</p>
+        <h2>Remotes &amp; covers</h2>
+      </div>
+      <p class="section-note">
+        Prices are being finalised — every item is quoted on request for now.
+        Tap <strong>Enquire</strong> on anything and we'll confirm price and availability.
+      </p>
+    </div>
+
+    <div class="toolbar" id="toolbar">
+      <div class="tool-search">
+        <svg viewBox="0 0 24 24" class="ic search-ic" aria-hidden="true"><path d="M10 2a8 8 0 105.3 14l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+        <input id="query" type="search" placeholder="Search brand, model or code…" aria-label="Search catalogue" autocomplete="off">
+      </div>
+
+      <label class="field">
+        <span>Category</span>
+        <select id="filterCategory"></select>
+      </label>
+
+      <label class="field">
+        <span>Brand</span>
+        <select id="filterBrand"></select>
+      </label>
+
+      <label class="field">
+        <span>Sort</span>
+        <select id="filterSort">
+          <option value="relevance">Relevance</option>
+          <option value="az">Name A–Z</option>
+          <option value="za">Name Z–A</option>
+          <option value="category">Category</option>
+        </select>
+      </label>
+
+      <div class="seg" role="group" aria-label="Filter by type">
+        <button class="seg-btn is-active" data-type="all">All</button>
+        <button class="seg-btn" data-type="remote">Remotes</button>
+        <button class="seg-btn" data-type="cover">Covers</button>
+      </div>
+
+      <button class="btn btn-ghost reset" id="resetBtn" type="button">Reset</button>
+    </div>
+
+    <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <h3>No match in the wave</h3>
+      <p>We probably still have it — most of our stock isn't listed by exact code. Call or WhatsApp
+        <a href="tel:+27740508902">074 050 8902</a> with a photo of your old remote.</p>
+    </div>
+    <div class="load-more-wrap">
+      <button class="btn btn-solid" id="loadMore" type="button" hidden>Load more</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COVERS ================= -->
+<section class="section" id="covers">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Protect the one that works</p>
+        <h2>Cover ranges</h2>
+      </div>
+      <p class="section-note">Six ranges, cut for the remotes we sell. Mix and match any brand.</p>
+    </div>
+    <div class="cover-grid" id="coverGrid"></div>
+  </div>
+</section>
+
+<!-- ================= HOW ================= -->
+<section class="section section-alt" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Simple by design</p>
+        <h2>How it works</h2>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="step-n">1</span><h3>Find it</h3><p>Search the brand or model, or send us a photo of the remote you're replacing.</p></li>
+      <li><span class="step-n">2</span><h3>Get the price</h3><p>We reply with the price, availability and the exact replacement code. Pricing is quoted per order while the shop front is being finalised.</p></li>
+      <li><span class="step-n">3</span><h3>Pay &amp; receive</h3><p>EFT, card or cash on collection. Nationwide courier or collect in person.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <p class="eyebrow">Talk to us</p>
+      <h2>Can't find it? Just call.</h2>
+      <p class="section-note">
+        Our listed stock is the tip of the wave. Send the make and model and we'll match
+        the replacement remote or cover for you.
+      </p>
+      <div class="contact-actions">
+        <a class="btn btn-solid big" href="tel:+27740508902">
+          <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.25 1z"/></svg>
+          074 050 8902
+        </a>
+        <a class="btn btn-ghost big" href="https://wa.me/27740508902" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+    </div>
+    <ul class="contact-list">
+      <li><span>Phone</span><a href="tel:+27740508902">074 050 8902</a></li>
+      <li><span>WhatsApp</span><a href="https://wa.me/27740508902" target="_blank" rel="noopener">074 050 8902</a></li>
+      <li><span>Hours</span><strong>Mon–Sat, 08:00–18:00</strong></li>
+      <li><span>Delivery</span><strong>Nationwide courier or collection</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <strong>Remote Wave Centre</strong>
+      <p>Every remote. Every cover. One wave.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#catalogue">Catalogue</a>
+      <a href="#categories">Categories</a>
+      <a href="#covers">Covers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-meta">
+      <a href="tel:+27740508902">074 050 8902</a> · Prices quoted on request ·
+      <span id="year"></span> Remote Wave Centre
+    </p>
+  </div>
+</footer>
+
+<!-- ================= ENQUIRE MODAL ================= -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-x" data-close aria-label="Close">&times;</button>
+    <p class="eyebrow">Enquire</p>
+    <h3 id="modalTitle">Tell us what you need</h3>
+    <p class="modal-sub">Pricing is quoted on request. Send us the item and we'll confirm price and availability.</p>
+    <div class="modal-item" id="modalItem" hidden>
+      <span class="mi-label">Item</span>
+      <strong id="modalItemName"></strong>
+      <small id="modalItemMeta"></small>
+    </div>
+    <form id="enquiryForm" class="modal-form">
+      <label class="field col">
+        <span>Your name</span>
+        <input name="name" type="text" placeholder="Name" autocomplete="name">
+      </label>
+      <label class="field col">
+        <span>Your number</span>
+        <input name="phone" type="tel" placeholder="Contact number" autocomplete="tel">
+      </label>
+      <label class="field col">
+        <span>Message</span>
+        <textarea name="message" rows="3" placeholder="Make and model, quantity, delivery area…"></textarea>
+      </label>
+      <div class="modal-actions">
+        <a class="btn btn-teal" id="modalWa" href="https://wa.me/27740508902" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm0 2a8 8 0 016.2 13l-.4.5.7 2.7-2.8-.7-.5.3A8 8 0 0112 4z"/></svg>
+          Send on WhatsApp
+        </a>
+        <a class="btn btn-solid" id="modalCall" href="tel:+27740508902">Call 074 050 8902</a>
+        <button class="btn btn-ghost" type="button" id="modalCopy">Copy details</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
