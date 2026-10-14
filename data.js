@@ -255,28 +255,42 @@ window.RWC = (function () {
   */
   var overrides = {
     /* Real product photos live in assets/photos/. Each key is any unique
-       substring of the generated product name. Replace these with the
-       right photo once you've confirmed the brand of each one. */
-    "Samsung BN59-01199":        { image: "assets/photos/rwc-06.jpg" },
-    "Samsung Series 4/5/6/7/8":  { image: "assets/photos/rwc-22.jpg" },
-    "Hisense EN2B27":            { image: "assets/photos/rwc-09.jpg" },
-    "Hisense EN2Q27H":           { image: "assets/photos/rwc-03.jpg" },
-    "Hisense ERF3I80H":          { image: "assets/photos/rwc-11.jpg" },
-    "Hisense LED legacy":        { image: "assets/photos/rwc-15.jpg" },
-    "TCL Google TV RC802N":      { image: "assets/photos/rwc-16.jpg" },
-    "TCL Roku TV RC280":         { image: "assets/photos/rwc-28.jpg" },
-    "Skyworth Android TV Smart": { image: "assets/photos/rwc-24.jpg" },
-    "Vitron Smart TV (Whale TV)": { image: "assets/photos/rwc-01.jpg" }
+       substring of the generated product name. One photo per card. */
 
-    /* Other things you can set on any product:
-       price  — a number (1499) or string ("KSh 1499")
-       badge  — e.g. "Best seller"
-       blurb  — overrides the description
+    /* --- Vitron (3 photos / 3 cards) --- */
+    "Vitron Smart TV (Whale TV)": { image: "assets/photos/rwc-01.jpg" },
+    "Vitron Android TV Series":   { image: "assets/photos/rwc-10.jpg" },
+    "Vitron LED legacy":          { image: "assets/photos/rwc-24.jpg" },
 
-       Examples:
-       // "Samsung BN59-01315": { price: 1499, badge: "Best seller" },
-       // "DSTV Explora":        { price: "KSh 299" },
-       // "Daikin ARC433B":      { price: 2499 }
+    /* --- Hisense --- */
+    "Hisense EN2B27":             { image: "assets/photos/rwc-09.jpg" },
+    "Hisense EN2Q27H":            { image: "assets/photos/rwc-02.jpg" },
+    "Hisense ERF3I80H":           { image: "assets/photos/rwc-12.jpg" },
+    "Hisense LED legacy":         { image: "assets/photos/rwc-03.jpg" },
+
+    /* --- Samsung --- */
+    "Samsung BN59-01199":         { image: "assets/photos/rwc-06.jpg" },
+    "Samsung Series 4/5/6/7/8":   { image: "assets/photos/rwc-22.jpg" },
+    "Samsung BN59-01315":         { image: "assets/photos/rwc-04.jpg" },
+    "Samsung BN59-01363":         { image: "assets/photos/rwc-07.jpg" },
+
+    /* --- TCL (4 photos / 4 cards) --- */
+    "TCL Google TV RC802N":       { image: "assets/photos/rwc-16.jpg" },
+    "TCL Roku TV RC280":          { image: "assets/photos/rwc-28.jpg" },
+    "TCL S/P/C Series":           { image: "assets/photos/rwc-13.jpg" },
+    "TCL LED legacy":             { image: "assets/photos/rwc-08.jpg" },
+
+    /* --- LG --- */
+    "LG AKB75095307":             { image: "assets/photos/rwc-25.jpg" }
+
+    /* 16 of the 30 photos are placed above. Still unused:
+         rwc-05, rwc-11, rwc-14, rwc-15, rwc-17, rwc-18, rwc-19, rwc-20,
+         rwc-21, rwc-23, rwc-26, rwc-27, rwc-29, rwc-30
+
+       Other things you can set on any product:
+         price  — a number (1499) or string ("KSh 1499")
+         badge  — e.g. "Best seller"
+         blurb  — overrides the description
     */
   };
 
