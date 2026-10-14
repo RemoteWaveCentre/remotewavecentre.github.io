@@ -26,7 +26,10 @@ window.RWC = (function () {
     whatsapp: "254740508902",
     email: "sales@remotewavecentre.co.ke",
     hours: "Mon–Sat, 08:00–18:00",
-    area: "Nationwide delivery across Kenya"
+    area: "Nationwide delivery across Kenya",
+    handle: "@remotecenter",
+    instagram: "https://instagram.com/remotecenter",
+    tiktok: "https://tiktok.com/@remotecenter"
   };
 
   /* ---- Category tables: brand -> list of models ---- */
@@ -60,7 +63,8 @@ window.RWC = (function () {
         "Mecer": ["Smart Display Remote"],
         "Nexus": ["Smart TV Series"],
         "Amoi": ["LED legacy"],
-        "Sinclair": ["Smart Series"]
+        "Sinclair": ["Smart Series"],
+        "Vitron": ["Smart TV (Whale TV)", "Android TV Series", "LED legacy"]
       }
     },
     {
@@ -250,10 +254,30 @@ window.RWC = (function () {
      Examples (remove the leading slashes once you have the values):
   */
   var overrides = {
-    // "Samsung BN59-01315": { price: 149, badge: "Best seller" },
-    // "DSTV Explora":        { price: "KSh 299" },
-    // "Daikin ARC433B":      { image: "assets/photos/daikin-arc433b.jpg" },
-    // "Centurion Nova":      { image: "assets/photos/centurion-nova.jpg", price: 249 }
+    /* Real product photos live in assets/photos/. Each key is any unique
+       substring of the generated product name. Replace these with the
+       right photo once you've confirmed the brand of each one. */
+    "Samsung BN59-01199":        { image: "assets/photos/rwc-06.jpg" },
+    "Samsung Series 4/5/6/7/8":  { image: "assets/photos/rwc-22.jpg" },
+    "Hisense EN2B27":            { image: "assets/photos/rwc-09.jpg" },
+    "Hisense EN2Q27H":           { image: "assets/photos/rwc-03.jpg" },
+    "Hisense ERF3I80H":          { image: "assets/photos/rwc-11.jpg" },
+    "Hisense LED legacy":        { image: "assets/photos/rwc-15.jpg" },
+    "TCL Google TV RC802N":      { image: "assets/photos/rwc-16.jpg" },
+    "TCL Roku TV RC280":         { image: "assets/photos/rwc-28.jpg" },
+    "Skyworth Android TV Smart": { image: "assets/photos/rwc-24.jpg" },
+    "Vitron Smart TV (Whale TV)": { image: "assets/photos/rwc-01.jpg" }
+
+    /* Other things you can set on any product:
+       price  — a number (1499) or string ("KSh 1499")
+       badge  — e.g. "Best seller"
+       blurb  — overrides the description
+
+       Examples:
+       // "Samsung BN59-01315": { price: 1499, badge: "Best seller" },
+       // "DSTV Explora":        { price: "KSh 299" },
+       // "Daikin ARC433B":      { price: 2499 }
+    */
   };
 
   function slug(s) {
