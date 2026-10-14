@@ -8,7 +8,7 @@
    PRICING: every generated product has a `price` field that is
    currently `null`. While it is null the UI shows "Price on
    request" plus the contact number. To put a price on anything,
-   set `price` to a number (e.g. 149) or a string ("R149.00") —
+   set `price` to a number (e.g. 1499) or a string ("KSh 1499") —
    either on a single product in `overrides`, or globally by
    handing a price table to `buildCatalog`.
    ============================================================ */
@@ -18,13 +18,15 @@ window.RWC = (function () {
 
   var CONTACT = {
     name: "Remote Wave Centre",
-    phoneDisplay: "074 050 8902",
+    country: "Kenya",
+    currency: "KSh",
+    phoneDisplay: "0740 508 902",
     phone: "0740508902",
-    phoneIntl: "+27740508902",
-    whatsapp: "27740508902",
-    email: "sales@remotewavecentre.co.za",
+    phoneIntl: "+254740508902",
+    whatsapp: "254740508902",
+    email: "sales@remotewavecentre.co.ke",
     hours: "Mon–Sat, 08:00–18:00",
-    area: "Nationwide delivery across South Africa"
+    area: "Nationwide delivery across Kenya"
   };
 
   /* ---- Category tables: brand -> list of models ---- */
@@ -249,7 +251,7 @@ window.RWC = (function () {
   */
   var overrides = {
     // "Samsung BN59-01315": { price: 149, badge: "Best seller" },
-    // "DSTV Explora":        { price: "R299.00" },
+    // "DSTV Explora":        { price: "KSh 299" },
     // "Daikin ARC433B":      { image: "assets/photos/daikin-arc433b.jpg" },
     // "Centurion Nova":      { image: "assets/photos/centurion-nova.jpg", price: 249 }
   };

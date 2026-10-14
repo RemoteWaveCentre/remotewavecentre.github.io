@@ -76,7 +76,14 @@
 
   function priceHtml(p) {
     if (p.price != null && p.price !== "") {
-      var val = typeof p.price === "number" ? "R" + p.price.toFixed(2) : String(p.price);
+      var val;
+      if (typeof p.price === "number") {
+        val = C.currency + " " + p.price.toLocaleString(undefined,
+          p.price % 1 === 0 ? { maximumFractionDigits: 0 }
+                            : { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      } else {
+        val = String(p.price);
+      }
       return '<div class="price"><span class="p-val">' + esc(val) + '</span>' +
         '<span class="p-note">incl. VAT</span></div>';
     }
@@ -348,7 +355,7 @@
   }
 
   function buildMessage() {
-    var f = $("enquiryForm");
+    var f = $("enquiryForm").elements;
     var name = f.name.value.trim();
     var phone = f.phone.value.trim();
     var msg = f.message.value.trim();
@@ -413,6 +420,53 @@
     toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2200);
   }
 
+  /* ---------------- Contact form (WhatsApp hand-off) ---------------- */
+
+  function initContactForm() {
+    var form = $("contactForm");
+    if (!form) return;
+    var note = $("cfNote");
+    var f = form.elements;
+
+    function clearNote() {
+      if (note.textContent) { note.textContent = ""; note.classList.remove("err"); }
+    }
+
+    function build() {
+      var name = f.name.value.trim();
+      var phone = f.phone.value.trim();
+      var topic = f.topic.value;
+      var details = f.message.value.trim();
+      var lines = ["Hi " + C.name + ", I'd like to enquire about: " + topic + "."];
+      if (details) lines.push(details);
+      if (name) lines.push("Name: " + name);
+      if (phone) lines.push("Contact: " + phone);
+      return lines.join("\n");
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      clearNote();
+      if (!f.name.value.trim()) {
+        note.textContent = "Please add your name so we know who to reply to.";
+        note.classList.add("err");
+        f.name.focus();
+        return;
+      }
+      if (!f.phone.value.trim()) {
+        note.textContent = "Please add a contact number.";
+        note.classList.add("err");
+        f.phone.focus();
+        return;
+      }
+      window.open("https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(build()), "_blank", "noopener");
+      note.textContent = "Opening WhatsApp — if nothing happened, tap the WhatsApp button on the left.";
+      toast("Opening WhatsApp");
+    });
+
+    form.addEventListener("input", clearNote);
+  }
+
   /* ---------------- Delegated card buttons ---------------- */
 
   document.addEventListener("click", function (e) {
@@ -430,5 +484,6 @@
   initCovers();
   initFilters();
   initModal();
+  initContactForm();
   render();
 })();
