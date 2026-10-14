@@ -88,9 +88,9 @@ h3 { font-size: 1.05rem; }
 }
 .header-inner { display: flex; align-items: center; gap: 22px; height: 74px; }
 .brand { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
-.brand-mark { width: 42px; height: 42px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(20, 184, 166, .3); position: relative; }
+.brand-mark { width: 46px; height: 36px; border-radius: 9px; overflow: hidden; box-shadow: 0 8px 20px rgba(20, 184, 166, .3); position: relative; }
 .brand-mark svg { width: 100%; height: 100%; }
-.brand-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; background: var(--bg); }
+.brand-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 9px; z-index: 1; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-text strong { font-size: 1.05rem; letter-spacing: -0.02em; }
 .brand-text small { font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--mint); }
@@ -262,6 +262,7 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 .footer-brand strong { font-size: 1.05rem; }
 .footer-brand p { color: var(--muted-2); font-size: 0.86rem; margin: 4px 0 0; }
+.footer-logo { width: 118px; height: auto; border-radius: 12px; margin-bottom: 12px; display: block; }
 .footer-nav { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer-nav a { color: var(--muted); font-size: 0.9rem; }
 .footer-nav a:hover { color: var(--mint); }
